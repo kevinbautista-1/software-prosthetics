@@ -15,8 +15,8 @@ void setup()
   // UNCOMMENT when using Arduino
   // pinMode(A0, INPUT); // analog pin used to connect the sensor
   
-  lag = 48;
-  threshold = 3; 
+  lag = 18;
+  threshold = 1; 
   influence = 0.6;
   peakDetection.begin(lag, threshold, influence); // sets the lag, threshold and influence
 
@@ -25,7 +25,7 @@ void setup()
 void loop() 
 {
   // UNCOMMENT OUT WHEN USING WITH ARDUINO
-  // double data = (double)analogRead(A0)/512-1; // reads the value of the sensor and converts to a range between -1 and 1
+  double data = (double)analogRead(A0)/512-1; // reads the value of the sensor and converts to a range between -1 and 1
 
   // COMMENT OUT WHEN USING ARDUINO
  // data = rand(100);
